@@ -1,0 +1,1013 @@
+:root {
+    --my-lg-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --my-sm-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+        0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.my-lg-shadow {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.my-sm-shadow {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+        0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    background-color: #F8FAFC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-gradient {
+    background: linear-gradient(to bottom right, #00b8db, #155dfc);
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(to bottom right, #7f22fe, #4f39f6);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+.icon-container i {
+    font-size: 18px;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.img-container {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+}
+
+/*da bta3 el section elly t7t (all contacts) el circle el so8yra bta3t el emegency 
+awy el favorite elly bthzr 3la sort el contact
+
+shakl el start w el heart*/
+
+.contact-tag {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 2px white;
+    right: -2px;
+}
+
+.contact-tag i {
+    font-size: 8px;
+}
+
+.contact-tag.favorite-icon {
+    top: -2px;
+    background-color: #ffb900;
+}
+
+.contact-tag.emergency-icon {
+    bottom: -2px;
+    background-color: #ff2056;
+}
+
+
+/*==========================================================================*/
+/*Nav bar Start*/
+.navbar {
+    border-bottom: solid 1px #ebe6e7;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+}
+
+.navbar .nav-content {
+    height: 64px;
+    padding-inline: 16px;
+    max-width: 1280px;
+}
+
+.navbar .navbar-brand {
+    gap: 12px;
+}
+
+.navbar .navbar-brand .icon-container {
+    width: 40px;
+    height: 40px;
+    box-shadow:
+        0 10px 15px -3px rgba(139, 92, 246, 0.25),
+        0 4px 6px -4px rgba(139, 92, 246, 0.25);
+}
+
+.navbar .logo-text-container h1 {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #101828;
+}
+
+.navbar .logo-text-container h1 span {
+    color: #7f22fe;
+}
+
+.navbar .logo-text-container p {
+    font-size: 10px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #6a7282;
+}
+
+.navbar .nav-content .nav-buttons {
+    gap: 8px;
+}
+
+.navbar .nav-content .nav-buttons .icon-container {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    color: #6a7282;
+    transition: all 0.2s;
+}
+
+.navbar .nav-content .nav-buttons .icon-container:hover {
+    color: #364153;
+    background-color: #f6f3f4;
+}
+
+.navbar .nav-content .nav-buttons .icon-container i {
+    font-size: 16px !important;
+}
+
+.navbar .nav-content .nav-buttons #addContactbutton {
+    padding-block: 10px;
+    padding-inline: 16px;
+    border-radius: 12px;
+    background: linear-gradient(to bottom right, #7f22fe, #4f39f6);
+    transition: all 0.2s;
+}
+
+.navbar .nav-content .nav-buttons #addContactbutton:hover {
+    box-shadow:
+        0 10px 15px -3px rgba(139, 92, 246, 0.25),
+        0 4px 6px -4px rgba(139, 92, 246, 0.25);
+    transform: translateY(-2px);
+
+}
+
+.navbar .nav-content .nav-buttons #addContactbutton i {
+    font-size: 10px;
+}
+
+.navbar .nav-content .nav-buttons #addContactbutton span {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.navbar .img-container {
+    box-shadow: 0 0 0 2px #f6f3f4;
+}
+
+/*==========================================================================*/
+/*main section Start*/
+main {
+    margin-top: 64px;
+    padding-block: 24px;
+    padding-inline: 16px;
+    max-width: 1280px;
+}
+
+/*main section End*/
+/*==========================================================================*/
+/*Summary card Section Start*/
+#quick-stats {
+    margin-bottom: 32px;
+}
+
+#quick-stats .contacts-summary {
+    --bs-gutter-x: 12px;
+    --bs-gutter-y: 12px;
+}
+
+#quick-stats .contact-card .inner {
+    padding: 16px;
+    border: 1px solid #f6f3f4;
+    box-shadow:
+        0 1px 3px 0 rgba(0, 0, 0, 0.1),
+        0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s;
+}
+
+#quick-stats .contact-card .inner:hover {
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+#quick-stats .contact-card .icon-container {
+    width: 44px;
+    height: 44px;
+}
+
+#quick-stats .contact-card i {
+    font-size: 15px;
+}
+
+#quick-stats .contact-card .summary-card-info p:first-child {
+    font-size: 11px;
+    line-height: 17px;
+    font-weight: 600;
+    color: #6a7282;
+}
+
+
+#quick-stats .contact-card .summary-card-info p:last-child {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #101828;
+}
+
+/*Special Desing*/
+#quick-stats .total-card .icon-container {
+    background: linear-gradient(to bottom right, #2b7fff, #155dfc);
+    box-shadow:
+        0 10px 15px -3px rgba(59, 130, 246, 0.25),
+        0 4px 6px -4px rgba(59, 130, 246, 0.25);
+}
+
+#quick-stats .emergency-card .icon-container {
+    background: linear-gradient(to bottom right, #ffb900, #ff6900);
+    box-shadow:
+        0 10px 15px -3px rgba(245, 158, 11, 0.25),
+        0 4px 6px -4px rgba(245, 158, 11, 0.25);
+
+}
+
+#quick-stats .favorites-card .icon-container {
+    background: linear-gradient(to bottom right, #ff2056, #e7000b);
+    box-shadow:
+        0 10px 15px -3px #ff235740,
+        0 4px 6px -4px #ff235740;
+}
+
+/*Summary card Section End*/
+/*==========================================================================*/
+#contact-details {
+    gap: 32px;
+}
+
+/* contact-details --> all-contacts Start*/
+#contact-details .all-contacts {
+    flex: 1;
+}
+
+#contact-details .all-contacts .contact-header-text {
+    margin-bottom: 20px;
+}
+
+#contact-details .all-contacts .contact-header-text h2 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #101828;
+}
+
+#contact-details .all-contacts .contact-header-text p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #6a7282;
+}
+
+#contact-details .all-contacts .search-bar input {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #364153;
+    border-radius: 12px;
+    padding: 14px 16px 14px 44px;
+    transition: all 0.15s;
+    border: 1px solid #ebe6e7;
+}
+
+#contact-details .all-contacts .search-bar input::placeholder {
+    color: #99a1af;
+}
+
+#contact-details .all-contacts .search-bar input:focus-visible {
+    outline: none;
+}
+
+#contact-details .all-contacts .search-bar input:focus {
+    outline: none;
+    border: 1px solid #8e51ff;
+    box-shadow: 0 0 0 2px #8d54ff33;
+}
+
+#contact-details .all-contacts .search-bar .serch-icon {
+    top: 50%;
+    transform: translateY(-50%);
+    color: #99a1af;
+}
+
+/*========*
+/* contact-Grid */
+#contact-details .all-contacts .contact-grid .contact-card .inner {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+        0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f6f3f4;
+    transition: all 0.2s;
+    height: 100%;
+    /* When I set height: 100%, the extra space appears under the footer — but I want extra space so that the cards next to each other have equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* pushes footer to bottom */
+}
+
+/* contact-Grid */
+#contact-details .all-contacts .contact-grid .contact-card .inner:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ebe6e7;
+}
+
+/*=============================*/
+/* contact-header */
+
+#contact-details .all-contacts .contact-grid .contact-card .inner .contact-header {
+    padding: 16px 16px 12px 16px;
+
+}
+
+#contact-details .all-contacts .contact-grid .contact-header div:first-child {
+    gap: 14px;
+}
+
+/*Awl saf fy el card header*/
+#contact-details .all-contacts .contact-grid .contact-header .card-row-1 {
+    margin-bottom: 12px;
+}
+
+/*da elly feh el sora*/
+#contact-details .all-contacts .contact-grid .contact-header .card-identity .icon-container {
+    width: 56px;
+    height: 56px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    border-radius: 12px;
+    background: linear-gradient(to bottom right, #00b8db, #155dfc);
+}
+
+#contact-details .all-contacts .contact-grid .contact-header h3 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #101828;
+}
+
+#contact-details .all-contacts .contact-grid .contact-header span {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #4a5565;
+}
+
+/*ay icon gwa el card-header except card identity*/
+#contact-details .all-contacts .contact-grid .contact-header .icon-container {
+    width: 24px;
+    height: 24px;
+    background: none;
+    background-color: #dbeafe;
+    border-radius: 6px;
+}
+
+/*Special design*/
+#contact-details .all-contacts .contact-grid .contact-header .icon-container.phone-icon i {
+    font-size: 9px;
+    color: #155dfc;
+}
+
+#contact-details .all-contacts .contact-grid .contact-header .icon-container.email-icon {
+    background-color: #ede9fe;
+}
+
+#contact-details .all-contacts .contact-grid .contact-header .icon-container.email-icon i {
+    font-size: 10px;
+    color: #7f22fe;
+}
+
+#contact-details .all-contacts .contact-grid .contact-header .icon-container.address-icon {
+    background-color: #d0fae5;
+}
+
+#contact-details .all-contacts .contact-grid .contact-header .icon-container.address-icon i {
+    font-size: 10px;
+    color: #009966;
+}
+
+/*Contact header last row*/
+#contact-details .all-contacts .contact-grid .contact-header>div:last-child {
+    gap: 6px;
+    margin-top: 12px;
+}
+
+#contact-details .all-contacts .contact-grid .contact-header #contact-group,
+#contact-details .all-contacts .contact-grid .contact-header #contact-emergency {
+    background-color: #dcfce7;
+    color: #008236;
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+#contact-details .all-contacts .contact-grid .contact-header #contact-emergency {
+    background-color: #fff1f2;
+    color: #ec003f;
+}
+
+/*===========Mtzbta fy el JS bn7ot el class 3la 7asb el group elly e5trnah*/
+/*hna 3mlt classes ll kol group feh el style bta3u*/
+#contact-details .all-contacts .contact-grid .contact-header #contact-group.friends {
+    background-color: #dcfce7;
+    color: #008236;
+}
+
+#contact-details .all-contacts .contact-grid .contact-header #contact-group.family {
+    background-color: #dbeafe;
+    color: #1447e6;
+}
+
+#contact-details .all-contacts .contact-grid .contact-header #contact-group.family {
+    background-color: #dbeafe;
+    color: #1447e6;
+}
+
+#contact-details .all-contacts .contact-grid .contact-header #contact-group.work {
+    background-color: #f3e8ff;
+    color: #8200db;
+}
+
+#contact-details .all-contacts .contact-grid .contact-header #contact-group.school {
+    background-color: #fef3c6;
+    color: #bb4d00;
+}
+
+#contact-details .all-contacts .contact-grid .contact-header #contact-group.other {
+    background-color: #f6f3f4;
+    color: #364153;
+}
+
+
+
+/*=============================*/
+/* contact-footer */
+#contact-details .all-contacts .contact-grid .contact-footer {
+    padding: 10px 16px 10px 16px;
+    border-top: 1px solid #f6f3f4;
+    background-color: #fbf9fa;
+}
+
+#contact-details .all-contacts .contact-grid .contact-footer .icon-container {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: none;
+    border: none;
+    color: #6a7282;
+    background-color: #fbf9fa;
+    transition: all 0.2s;
+}
+
+#contact-details .all-contacts .contact-grid .contact-footer .icon-container i {
+    font-size: 14px;
+}
+
+/*div:first-child => contact footer Left part |||| .icon-container:first-child  => Call phone */
+#contact-details .all-contacts .contact-grid .contact-footer div:first-child .icon-container:first-child {
+    background-color: #ecfdf5;
+    color: #009966;
+}
+
+/*div:first-child => contact footer Left part |||| .icon-container:first-child  => Send email */
+#contact-details .all-contacts .contact-grid .contact-footer div:first-child .icon-container:last-child {
+    background-color: #f5f3ff;
+    color: #7f22fe;
+}
+
+#contact-details .all-contacts .contact-grid .contact-footer>div {
+    gap: 6px;
+}
+
+/*Special design -in case en el icon not emergenncy & !favorite*/
+#contact-details .all-contacts .contact-grid .contact-footer .addFavIcon:hover {
+    color: #ffb900;
+    background-color: #f6f3f4;
+}
+
+#contact-details .all-contacts .contact-grid .contact-footer .addEmergIcon:hover {
+    color: #ec003f;
+    background-color: #f6f3f4;
+}
+
+#contact-details .all-contacts .contact-grid .contact-footer #updateIcon:hover {
+    color: #4f39f6;
+    background-color: #eef2ff;
+}
+
+#contact-details .all-contacts .contact-grid .contact-footer #deleteIcon:hover {
+    color: #ec003f;
+    background-color: #fff1f2;
+}
+
+/*bn3ml class hnst5dmu fy el js lma tkon el contact -> emegency : 3shan icon style by5tlf*/
+#contact-details .all-contacts .contact-grid .contact-footer .emergency-added {
+    color: #ff2056;
+    background-color: #fff1f2;
+}
+
+#contact-details .all-contacts .contact-grid .contact-footer .emergency-added:hover {
+    background-color: #ffe4e6;
+}
+
+#contact-details .all-contacts .contact-grid .contact-footer .fav-added {
+    color: #ffb900;
+    background-color: #fffbeb;
+}
+
+#contact-details .all-contacts .contact-grid .contact-footer .fav-added:hover {
+    background-color: #fef3c6;
+}
+
+
+/* contact-details --> all-contacts End*/
+/*=============================================================*/
+
+/*==================================================*/
+
+/* contact-details --> fav-emrg-contacts End*/
+/*favContactList*/
+
+/*inCase mobile*/
+.contactList {
+    margin-top: 32px;
+}
+
+/* contact-details --> fav-emrg-contacts Start*/
+#contact-details .fav-emrg-contacts {
+    width: 100%;
+    position: sticky;
+    top: 85px;
+}
+
+/*fav list*/
+#favContactSection {
+    margin-bottom: 20px;
+}
+
+.contactList,
+.contactList .list-header {
+    border: 1px solid #f6f3f4;
+}
+
+.contactList .list-header h2 {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #101828;
+}
+
+.contactList .list-header p {
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #6a7282;
+}
+
+.contactList .list-header {
+    padding: 16px 20px;
+    background: linear-gradient(to bottom right, #fffbeb, #fff7ed);
+    gap: 12px;
+}
+
+
+.contactList .list-header .icon-container {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: linear-gradient(to bottom right, #ffb900, #ff6900);
+}
+
+.contactList .list-header .icon-container i {
+    font-size: 12px;
+}
+
+/*fav list body*/
+
+.contactList .list-body {
+    padding: 12px;
+    max-height: 280px;
+}
+
+/*hide Scroll bar*/
+.contactList .list-body::-webkit-scrollbar {
+    display: none;
+}
+
+.contactList .list-body .list-card {
+    gap: 12px;
+    padding: 10px;
+    margin-bottom: 12px;
+    background-color: #fbf9fa;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+
+.contactList .list-body .list-card h4 {
+    font-size: 11px;
+    line-height: 14px;
+    font-weight: 500;
+    color: #101828;
+}
+
+.contactList .list-body .list-card p {
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #6a7282;
+}
+
+/*Contact Icon*/
+.contactList .list-body .list-card :first-child.icon-container {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.contactList .list-body .list-card a i {
+    font-size: 8px;
+}
+
+/*Call icon*/
+.contactList .list-body .list-card a.icon-container {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: none;
+}
+
+/*Special design*/
+/*favorite List*/
+#favContactSection .list-body .list-card:hover a.icon-container {
+    background-color: #00bc7d;
+    color: white;
+}
+
+#favContactSection .list-body .list-card a.icon-container {
+    background-color: #ecfdf5;
+    color: #009966;
+}
+
+#favContactSection .list-body .list-card:hover {
+    background-color: #fffbeb;
+}
+
+
+/*Emergency List*/
+#emergContactSection .list-header {
+    background: linear-gradient(to bottom right, #fff1f2, #fef2f2);
+}
+
+#emergContactSection .list-header .icon-container {
+    background: linear-gradient(to bottom right, #ff2056, #e7000b);
+}
+
+#emergContactSection .list-body .list-card:hover a.icon-container {
+    background-color: #ff2056;
+    color: white;
+}
+
+#emergContactSection .list-body .list-card a.icon-container {
+    background-color: #ffe4e6;
+    color: #ec003f;
+}
+
+#emergContactSection .list-body .list-card:hover {
+    background-color: #fff1f2;
+}
+
+/*=============================================================*/
+/*fav-emrg-contacts-mobile Start*/
+#fav-emrg-contacts-mobile {
+    margin-top: 32px;
+}
+
+#fav-emrg-contacts-mobile .contactList .list-header .icon-container {
+    width: 32px;
+    height: 32px;
+}
+
+#fav-emrg-contacts-mobile .contactList .list-header .icon-container i {
+    font-size: 12px;
+}
+
+#fav-emrg-contacts .contactList .list-header h2 {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#fav-emrg-contacts .contactList .list-header p {
+    font-size: 10px;
+    line-height: 15px;
+}
+
+
+
+#fav-emrg-contacts-mobile .contactList .list-body {
+    max-height: 280px;
+}
+
+#fav-emrg-contacts-mobile .contactList .list-body .list-card h4 {
+    font-size: 11px;
+    line-height: 14px;
+}
+
+#fav-emrg-contacts-mobile .contactList .list-body .list-card p {
+    font-size: 10px;
+    line-height: 15px;
+}
+
+
+#fav-emrg-contacts-mobile .contactList .list-body .list-card a i {
+    font-size: 8px;
+}
+
+/*Call icon*/
+#fav-emrg-contacts-mobile .contactList .list-body .list-card a.icon-container {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+}
+
+#noContacts {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #99a1af;
+}
+
+/*=============================================================*/
+/*=============================================================*/
+/*=============================================================*/
+/*Modal*/
+.modal {
+    --bs-modal-border-radius: 16px;
+    width: 100%;
+}
+
+/*hide Scroll bar ell gwa l modal*/
+.modal-body::-webkit-scrollbar {
+    display: none;
+}
+
+.modal.show {
+    backdrop-filter: blur(4px);
+}
+
+.modal-open {
+    overflow: auto !important;
+    /*n5leh y2dr  y-Scroll fy el bg elly warra el modal*/
+}
+
+.modal .modal-header h1 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #101828;
+}
+
+.modal .modal-header .btn-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    --bs-btn-close-bg: none;
+    --bs-btn-close-focus-shadow: none;
+    transition: all 0.15s;
+}
+
+.modal .modal-header .btn-close:hover {
+    background-color: #f6f3f4;
+}
+
+.modal .modal-header .btn-close i {
+    color: #99a1af;
+}
+
+.modal .modal-header .btn-close:hover i {
+    color: #4a5565;
+}
+
+/*========*/
+
+/*Modal form*/
+/*any dirct div --> zy name row ... upload photo row*/
+.modal .modal-body #contactForm>div {
+    margin-bottom: 20px;
+}
+
+.modal .modal-body .upload-photo {
+    gap: 12px;
+}
+
+.modal .modal-body .upload-photo .icon-container {
+    width: 96px;
+    height: 96px;
+    background: linear-gradient(to bottom right, #51a2ff, #155dfc);
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+.modal .modal-body .upload-photo .icon-container i {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/*Upload btn*/
+.modal .modal-body .upload-photo .photo-btn {
+    cursor: pointer;
+    color: #364153;
+    background-color: #f6f3f4;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.15s;
+}
+
+/*Camera icon*/
+.modal .modal-body .upload-photo .photo-btn i {
+    color: #6a7282;
+}
+
+.modal .modal-body .upload-photo .photo-btn:hover {
+    background-color: #ebe6e7;
+}
+
+/*Form input*/
+.modal .modal-body input,
+.modal .modal-body select,
+.modal .modal-body textarea {
+    font-size: 14px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background-color: #fbf9fa;
+    border: 1px solid #d1d5dc;
+    transition: all 0.15s;
+}
+
+.modal .modal-body textarea {
+    resize: none;
+}
+
+.modal .modal-body select {
+    appearance: none;
+    /*btshel el down arrow ˅*/
+    cursor: pointer;
+}
+
+.modal .modal-body input:focus-visible,
+.modal .modal-body select:focus-visible,
+.modal .modal-body textarea:focus-visible {
+    outline: none;
+}
+
+.modal .modal-body input:focus,
+.modal .modal-body select:focus,
+.modal .modal-body textarea:focus {
+    outline: none;
+    border: 1px solid #8e51ff;
+    box-shadow: 0 0 0 2px #8d54ff33;
+    background-color: white;
+}
+
+.modal .modal-body label,
+.modal .modal-body .contactCheckBox span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #364153;
+    margin-bottom: 6px;
+}
+
+.modal .modal-body label span {
+    color: #ff2056;
+}
+
+/*modal Form checkboxes*/
+.modal .modal-body input[type="checkbox"] {
+    width: 20px !important;
+    height: 20px !important;
+    color: #7f22fe;
+    border: 1px solid #d1d5dc;
+    border-radius: 4px;
+}
+
+.modal .modal-body input[type="checkbox"]:checked {
+    outline: none;
+    box-shadow: none;
+}
+
+.modal .modal-body .contactCheckBox {
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.modal .modal-body .contactCheckBox:hover span {
+    color: #101828;
+}
+
+/*modal Form buttons*/
+.modal .modal-body .form-buttons button {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    transition: all 0.15s;
+}
+
+.modal .modal-body .form-buttons #cancelModalBtn {
+    color: #364153;
+    background-color: #f6f3f4;
+}
+
+.modal .modal-body .form-buttons #cancelModalBtn:hover {
+    background-color: #ebe6e7;
+}
+
+.modal .modal-body .form-buttons #saveModalBtn {
+    background: linear-gradient(to bottom right, #7f22fe, #4f39f6);
+}
+
+.modal .modal-body .form-buttons #saveModalBtn i {
+    font-size: 13px;
+}
+
+.modal .modal-body .form-buttons #saveModalBtn:hover {
+    box-shadow: 0 10px 15px -3px #8d54ff40,
+        0 4px 6px -4px #8d54ff40;
+}
+
+/*Style error msg*/
+.error-msg {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #ff2056;
+    margin-top: 6px;
+}
