@@ -331,7 +331,7 @@ function updateContact(index) {
 
     //fill form with selected contact data
     document.getElementById('contact-photo').innerHTML = `${contactList[index].image !== 'noPhoto' ? `<img src="${contactList[index].image}" 
-                                        class="w-100 h-100 object-fit-cover">`: contactList[index].firstNameFirstLetter + contactList[index].secondNameFirstLetter}`;
+                                        class="w-100 h-100 object-fit-cover  onerror="this.parentElement.textContent='${contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}'">` : contactList[index].firstNameFirstLetter + contactList[index].secondNameFirstLetter}`;
     // contactImageInput = contactList[index].image;
     contactNameInput.value = contactList[index].name;
     contactPhoneInput.value = contactList[index].phoneNumber;
@@ -362,7 +362,7 @@ function findContact() {
                                         <div class="card-identity position-relative">
                                             <div class="icon-container my-sm-shadow text-white overflow-hidden" style=" background: linear-gradient(to bottom right, ${contactList[i].bgGradient[0]}, ${contactList[i].bgGradient[1]});">
                                             ${contactList[i].image !== 'noPhoto' ? `<img src="${contactList[i].image}" 
-                                        class="w-100 h-100 object-fit-cover">`: contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}
+                                        class="w-100 h-100 object-fit-cover" onerror="this.parentElement.textContent='${contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}'">` : contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}
                                             
                                             </div>
                                             <div class="contact-tag favorite-icon rounded-circle" style="display:${contactList[i].isFavorite ? 'flex' : 'none'};">
