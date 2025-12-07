@@ -260,7 +260,6 @@ function displayFavoriteContacts() {
                                 <div class="icon-container flex-shrink-0 overflow-hidden"style=" background: linear-gradient(to bottom right, ${contactList[i].bgGradient[0]}, ${contactList[i].bgGradient[1]});">
                                     ${contactList[i].image !== 'noPhoto' ? `<img src="${contactList[i].image}" 
                                         class="w-100 h-100 object-fit-cover"   onerror="this.parentElement.textContent='${contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}'">` : contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}
-                                            
                                 </div>
                                 <div class="flex-grow-1">
                                     <h4>${contactList[i].name}</h4>
@@ -492,7 +491,7 @@ function handleInputName() {
 /*Validate Name*/
 function validateName() {
     var userName = handleInputName();
-    var pattern = /^[A-Za-z ]{2,50}$/;
+    var pattern = /^[A-Za-zء-ي ]{2,50}$/;
     var nameErrorMsg = document.getElementById('nameErrorMsg');
     //  console.log(userName[0]);
     if (pattern.test(userName[0])) {
