@@ -213,7 +213,7 @@ function displayEmergencyContacts() {
             box += ` <div class="list-card d-flex align-items-center rounded-3 col">
                                 <div class="icon-container flex-shrink-0 overflow-hidden"style=" background: linear-gradient(to bottom right, ${contactList[i].bgGradient[0]}, ${contactList[i].bgGradient[1]});">
                                     ${contactList[i].image !== 'noPhoto' ? `<img src="${contactList[i].image}" 
-                                        class="w-100 h-100 object-fit-cover">`: contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}
+                                        class="w-100 h-100 object-fit-cover"   onerror="this.parentElement.textContent='${contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}'">` : contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}
                                             
                                 </div>
                                 <div class="flex-grow-1">
@@ -259,7 +259,7 @@ function displayFavoriteContacts() {
             box += ` <div class="list-card d-flex align-items-center rounded-3 col">
                                 <div class="icon-container flex-shrink-0 overflow-hidden"style=" background: linear-gradient(to bottom right, ${contactList[i].bgGradient[0]}, ${contactList[i].bgGradient[1]});">
                                     ${contactList[i].image !== 'noPhoto' ? `<img src="${contactList[i].image}" 
-                                        class="w-100 h-100 object-fit-cover">`: contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}
+                                        class="w-100 h-100 object-fit-cover"   onerror="this.parentElement.textContent='${contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}'">` : contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}
                                             
                                 </div>
                                 <div class="flex-grow-1">
