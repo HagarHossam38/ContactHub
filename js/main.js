@@ -331,7 +331,7 @@ function updateContact(index) {
 
     //fill form with selected contact data
     document.getElementById('contact-photo').innerHTML = `${contactList[index].image !== 'noPhoto' ? `<img src="${contactList[index].image}" 
-                                        class="w-100 h-100 object-fit-cover  onerror="this.parentElement.textContent='${contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}'">` : contactList[index].firstNameFirstLetter + contactList[index].secondNameFirstLetter}`;
+                                        class="w-100 h-100 object-fit-cover">`: contactList[index].firstNameFirstLetter + contactList[index].secondNameFirstLetter}`;
     // contactImageInput = contactList[index].image;
     contactNameInput.value = contactList[index].name;
     contactPhoneInput.value = contactList[index].phoneNumber;
@@ -564,8 +564,16 @@ function fireAlert() {
         }
         else if (validatePhoneNumber()) {
             for (var i = 0; i < contactList.length; i++) {
-                if (i == updateOrAdd_flag) continue;
-                if (contactList[i].phoneNumber == contactPhoneInput.value) {
+                console.log("i", i);
+                console.log("updateOrAdd_flag", updateOrAdd_flag);
+
+                console.log(contactList[i].phoneNumber);
+                console.log(contactPhoneInput.value);
+                console.log(contactPhoneInput.value == contactList[i].phoneNumber);
+
+
+
+                if (i !== updateOrAdd_flag && contactList[i].phoneNumber === contactPhoneInput.value) {
                     Swal.fire({
                         title: "Duplicate Phone Number",
                         text: `A contact with this phone number already exists: ${contactList[i].name}`,
