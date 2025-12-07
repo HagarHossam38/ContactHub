@@ -125,7 +125,7 @@ function displayContact() {
                                         <div class="card-identity position-relative">
                                             <div class="icon-container my-sm-shadow text-white overflow-hidden" style=" background: linear-gradient(to bottom right, ${contactList[i].bgGradient[0]}, ${contactList[i].bgGradient[1]});">
                                             ${contactList[i].image !== 'noPhoto' ? `<img src="${contactList[i].image}" 
-                                        class="w-100 h-100 object-fit-cover">`: contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}
+                                        class="w-100 h-100 object-fit-cover" onerror="this.parentElement.textContent='${contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}'">` : contactList[i].firstNameFirstLetter + contactList[i].secondNameFirstLetter}
                                             
                                             </div>
                                             <div class="contact-tag favorite-icon rounded-circle" style="display:${contactList[i].isFavorite ? 'flex' : 'none'};">
@@ -286,6 +286,7 @@ function displayFavoriteContacts() {
     }
     //lw fy fav contacts y5ly el grid => 2 col
     else {
+        //kanu ll mbile
         favContainer.classList.remove('row-cols-1');
         favContainer.classList.add('row-cols-1', 'row-cols-sm-2');
     }
